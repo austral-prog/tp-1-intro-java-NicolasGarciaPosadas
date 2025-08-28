@@ -1,4 +1,7 @@
 package com.template;
+
+import java.util.*;
+
 public class App {
 
     // 1. Sum of Two Integers
@@ -92,4 +95,86 @@ public class App {
         farenheit = (double) (celsius * 1.8 + 32);
         return farenheit;
     }
+    public int sumList(List <Integer> list){
+        int sum=0;
+        for (int i : list){
+            sum+=i;
+        }
+        return sum;
+    }
+    public int findMax(List<Integer> list) {
+        int max;
+        max = list.get(0);
+        for (int i : list){
+            if (i>max){
+                max=i;
+            }
+        }
+        return max;
+    }
+    public List filterEvenNumbers(List<Integer> list){
+        List<Integer> list2=new ArrayList<>();
+        for (int i : list){
+            if (i%2==0){
+                list2.add(i);
+            }
+        }
+        return list2;
+    }
+    public List concatenateLists(List<String> list1, List<String> list2){
+        List<String> list3=new ArrayList<>(list1);
+        list3.addAll(list2);
+        return list3;
+    }
+    public boolean listContains(List<String> list, String element){
+        for (String s : list){
+            if (s.equals(element)) {
+                return true;
+            }
+        return false;
+        }
+    }
+    public List<String> toUpperCase(List<String> list){
+        List<String> list2=new ArrayList<>();
+        for (String s : list){
+            s = s.toUpperCase();
+            list2.add(s);
+        }
+        return list2;
+    }
+    public List<Integer> removeDuplicates(List<Integer> list){
+        List<Integer> list2=new ArrayList<>();
+        for (int i : list){
+            if (!list2.contains(i)){
+                list2.add(i);
+            }
+        }
+        return list2;
+    }
+    public Set<Integer> listToSet(List<Integer> list){
+        return new HashSet<>(list);
+    }
+    public boolean mapContainsKey(Map<String, String> map, String key){
+        if (map.containsKey(key)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean mapContainsValue(Map<String, String> map, String value){
+        return map.containsValue(value);
+    }
+    public List<String> iterateMap(Map<String, String> map) {
+        List<String> result = new ArrayList<>();
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            result.add(entry.getKey() + " -> " + entry.getValue());
+        }
+        return result;
+    }
+
+
+
+
 }
+
