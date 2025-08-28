@@ -131,8 +131,8 @@ public class App {
             if (s.equals(element)) {
                 return true;
             }
-        return false;
         }
+        return false;
     }
     public List<String> toUpperCase(List<String> list){
         List<String> list2=new ArrayList<>();
